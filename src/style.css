@@ -4,6 +4,7 @@
     --pink: hsl(322, 100%, 66%);
     --pink-2: hsl(208, 11%, 55%);
     --white: #fff;
+    --trans: rgba(0, 0, 0, 0.3)
 }
 
 /* Basic Resets */
@@ -18,6 +19,8 @@ li,
 a {
     list-style-type: none;
     text-decoration: none;
+    color: var(--dark);
+
 }
 
 html {
@@ -27,10 +30,122 @@ html {
 
 body {
     box-sizing: border-box;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--dark);
     background-color: var(--light);
 }
 
-/* Base Styles */
-.btn {}
+/* Shared Styles | across all screen sizes */
+header {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 3rem;
+    border-radius: 5rem;
+    box-shadow: 0 0 10px var(--trans);
+    font-weight: 600;
+}
+
+.btn-white {
+    background-color: var(--white);
+}
+
+.btn-pink {
+    background-color: var(--pink);
+    color: var(--white);
+    padding: 1.5rem 4rem;
+}
+
+/* Mobile Styles */
+
+header {
+    background-image: url('../images/bg-hero-mobile.svg');
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    align-items: center;
+    margin-bottom: 7rem;
+}
+
+.nav__logo {
+    width: 10rem;
+}
+
+.nav__logo img {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 4rem;
+    gap: 5rem;
+}
+
+.header__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.header__paragraph {
+    color: var(--pink-2);
+}
+
+.header__btn {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.header__img img {
+    width: 100%;
+}
+
+.section__group {
+    padding: 10rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 4rem;
+    gap: 5rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.section__img img {
+    width: 100%;
+}
+
+.section__text {
+    text-align: center;
+}
+
+.section__heading {
+    margin-bottom: 2rem;
+}
+
+.section__paragraph {
+    color: var(--pink-2);
+}
+
+.footer {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 10rem 2rem 5rem 2rem;
+}
